@@ -1,0 +1,10 @@
+package ppks.projekt.projektPPKS.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import ppks.projekt.projektPPKS.model.UserInvitation;
+
+import java.util.List;
+
+public interface UserInvitationRepo extends JpaRepository<UserInvitation, Long> {
+    List<UserInvitation> findByInvitedUserId(Long userId);
+}
